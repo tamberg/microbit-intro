@@ -6,6 +6,8 @@
 - Save file to "USB Drive"
 
 ## Show LEDs ♥
+<img src="images/microbit-heart.png" width="512" />
+
 <img src="images/leds.png" width="512" />
 
 ```
