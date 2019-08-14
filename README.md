@@ -5,6 +5,8 @@
 - Connect the micro:bit via USB
 - Save file to "USB Drive"
 
+<img src="images/ide.png" width="512" />
+
 ## Show LEDs ♥
 <img src="images/microbit-heart.png" width="512" title="(c) Microbit.org" />
 
