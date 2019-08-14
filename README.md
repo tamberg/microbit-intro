@@ -36,14 +36,25 @@ counter (variable)
 		show number n
 
 ## Dice
-dice (random)
-	on shake
-		x = random()
-	forever
-		show number
+<img src="images/dice.png" width="512" />
+
+```
+input.onGesture(Gesture.Shake, function () {
+    basic.showNumber(Math.randomRange(0, 2))
+})
+```
+Or with a variable
+<img src="images/dice-with-variable.png" width="512" />
+
+```
+let result = 0
+input.onGesture(Gesture.Shake, function () {
+    result = Math.randomRange(0, 2)
+    basic.showNumber(result)
+})
+```
 
 ## Rock, Paper, Scissors
-
 <img src="images/rock-paper-scissors.png" width="512" />
 
 ```
