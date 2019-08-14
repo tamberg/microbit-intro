@@ -1,26 +1,58 @@
 # Introduction to the micro:bit
 
-## Get Started
+## Get started
 - Open https://makecode.microbit.org/
 - Connect the micro:bit via USB
 - Save file to "USB Drive"
 
-## Show icon ♥
-onstart
-	showicon
+## Show LEDs ♥
+<img src="images/microbit-heart.png" width="512" />
+
+<img src="images/leds.png" width="512" />
+
+```
+basic.showLeds(`
+    . # . # .
+    # # # # #
+    # # # # #
+    . # # # .
+    . . # . .
+    `)
+```
+
+## Show icon
+<img src="images/icon.png" width="512" />
+
+```
+basic.showIcon(IconNames.Heart)
+```
 
 ## Hello, World
-onstart
-	show string
+<img src="images/hello.png" width="512" />
+
+```
+basic.showString("Hello, World!")
+```
 
 ## Forever
-forever
-	showicon
-	showicon
+<img src="images/forever.png" width="512" />
+
+```
+basic.forever(function () {
+    basic.showIcon(IconNames.Heart)
+    basic.showIcon(IconNames.SmallHeart)
+})
+```
 
 ## Shake
-on shake
-	showicon
+<img src="images/shake.png" width="512" />
+
+```
+input.onGesture(Gesture.Shake, function () {
+    basic.showIcon(IconNames.No)
+})
+basic.showIcon(IconNames.Heart)
+```
 
 ## Buttons
 on button A pressed
@@ -29,11 +61,22 @@ on button B pressed
 	showstring B
 
 ## Counter (variable)
-counter (variable)
-	on start
-		n = 0
-	forever
-		show number n
+<img src="images/variable.png" width="512" />
+
+<img src="images/counter.png" width="512" />
+
+```
+let i = 0 // Variable
+input.onButtonPressed(Button.A, function () {
+    i = 0 // Reset variable
+})
+input.onButtonPressed(Button.B, function () {
+    i += 1 // Increment variable
+})
+basic.forever(function () {
+    basic.showNumber(i)
+})
+```
 
 ## Dice (random number)
 <img src="images/dice.png" width="512" />
@@ -61,14 +104,14 @@ input.onGesture(Gesture.Shake, function () {
 <img src="images/rock-paper-scissors.png" width="512" />
 
 ```
-let hand = 0
+let result = 0
 input.onGesture(Gesture.Shake, function () {
-    hand = Math.randomRange(0, 2)
-    if (hand == 0) {
+    result = Math.randomRange(0, 2)
+    if (result == 0) {
         basic.showIcon(IconNames.SmallSquare) // Rock
-    } else if (hand == 1) {
+    } else if (result == 1) {
         basic.showIcon(IconNames.Square) // Paper
-    } else { // hand == 2
+    } else { // result == 2
         basic.showIcon(IconNames.Scissors)
     }
 })
