@@ -46,15 +46,19 @@ dice (random)
 
 <img src="images/rock-paper-scissors.png" width="40%"/>
 
-rock paper scissors (if)
-	on shake
-		pick random
-	if 
-		show icon
-	else if 
-		show icon
-	else
-		show icon
+```
+let hand = 0
+input.onGesture(Gesture.Shake, function () {
+    hand = Math.randomRange(1, 3)
+    if (hand == 1) {
+        basic.showIcon(IconNames.Scissors)
+    } else if (hand == 2) {
+        basic.showIcon(IconNames.SmallSquare)
+    } else {
+        basic.showIcon(IconNames.Square)
+    }
+})
+```
 
 => make two, see who wins
 
