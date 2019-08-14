@@ -6,7 +6,7 @@
 - Save file to "USB Drive"
 
 ## Show LEDs ♥
-<img src="images/icon.png" width="512" />
+<img src="images/leds.png" width="512" />
 
 ```
 basic.showLeds(`
@@ -19,15 +19,18 @@ basic.showLeds(`
 ```
 
 ## Show icon
-<img src="images/icon-builtin.png" width="512" />
+<img src="images/icon.png" width="512" />
 
 ```
 basic.showIcon(IconNames.Heart)
 ```
 
 ## Hello, World
-onstart
-	show string
+<img src="images/hello.png" width="512" />
+
+```
+basic.showString("Hello, World!")
+```
 
 ## Forever
 <img src="images/forever.png" width="512" />
