@@ -43,6 +43,9 @@ dice (random)
 		show number
 
 ## Rock, Paper, Scissors
+
+<img src="images/rock-paper-scissors.jpg" width="640"/>
+
 rock paper scissors (if)
 	on shake
 		pick random
