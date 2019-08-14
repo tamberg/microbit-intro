@@ -14,13 +14,24 @@ onstart
 	show string
 
 ## Forever
-forever
-	showicon
-	showicon
+<img src="images/forever.png" width="512" />
+
+```
+basic.forever(function () {
+    basic.showIcon(IconNames.Heart)
+    basic.showIcon(IconNames.SmallHeart)
+})
+```
 
 ## Shake
-on shake
-	showicon
+<img src="images/shake.png" width="512" />
+
+```
+input.onGesture(Gesture.Shake, function () {
+    basic.showIcon(IconNames.No)
+})
+basic.showIcon(IconNames.Heart)
+```
 
 ## Buttons
 on button A pressed
