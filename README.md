@@ -49,13 +49,13 @@ dice (random)
 ```
 let hand = 0
 input.onGesture(Gesture.Shake, function () {
-    hand = Math.randomRange(1, 3)
-    if (hand == 1) {
+    hand = Math.randomRange(0, 2)
+    if (hand == 0) {
+        basic.showIcon(IconNames.SmallSquare) // Rock
+    } else if (hand == 1) {
+        basic.showIcon(IconNames.Square) // Paper
+    } else { // hand == 2
         basic.showIcon(IconNames.Scissors)
-    } else if (hand == 2) {
-        basic.showIcon(IconNames.SmallSquare)
-    } else {
-        basic.showIcon(IconNames.Square)
     }
 })
 ```
