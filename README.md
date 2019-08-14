@@ -44,7 +44,7 @@ dice (random)
 
 ## Rock, Paper, Scissors
 
-<img src="images/rock-paper-scissors.png" width="20%"/>
+<img src="images/rock-paper-scissors.png" width="30%"/>
 
 rock paper scissors (if)
 	on shake
