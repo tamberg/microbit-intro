@@ -104,14 +104,14 @@ input.onGesture(Gesture.Shake, function () {
 <img src="images/rock-paper-scissors.png" width="512" />
 
 ```
-let hand = 0
+let result = 0
 input.onGesture(Gesture.Shake, function () {
-    hand = Math.randomRange(0, 2)
-    if (hand == 0) {
+    result = Math.randomRange(0, 2)
+    if (result == 0) {
         basic.showIcon(IconNames.SmallSquare) // Rock
-    } else if (hand == 1) {
+    } else if (result == 1) {
         basic.showIcon(IconNames.Square) // Paper
-    } else { // hand == 2
+    } else { // result == 2
         basic.showIcon(IconNames.Scissors)
     }
 })
