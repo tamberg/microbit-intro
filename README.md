@@ -43,8 +43,10 @@ input.onGesture(Gesture.Shake, function () {
     basic.showNumber(Math.randomRange(1, 6))
 })
 ```
+
 Or with a variable
 <img src="images/dice-with-variable.png" width="512" />
+
 
 ```
 let result = 0
