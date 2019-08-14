@@ -1,4 +1,4 @@
-# Introduction to micro:bit
+# Micro:bit introduction
 
 ## Get Started
 - Open https://makecode.microbit.org/
