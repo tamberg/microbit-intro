@@ -28,14 +28,14 @@ on button A pressed
 on button B pressed
 	showstring B
 
-## Counter
+## Counter (variable)
 counter (variable)
 	on start
 		n = 0
 	forever
 		show number n
 
-## Dice
+## Dice (random number)
 <img src="images/dice.png" width="512" />
 
 ```
