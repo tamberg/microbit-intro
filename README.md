@@ -45,6 +45,7 @@ input.onGesture(Gesture.Shake, function () {
 ```
 
 Or with a variable
+
 <img src="images/dice-with-variable.png" width="512" />
 
 
