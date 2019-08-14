@@ -59,11 +59,20 @@ on button B pressed
 	showstring B
 
 ## Counter (variable)
-counter (variable)
-	on start
-		n = 0
-	forever
-		show number n
+<img src="images/counter.png" width="512" />
+
+```
+let i = 0 // Variable
+input.onButtonPressed(Button.A, function () {
+    i = 0 // Reset variable
+})
+input.onButtonPressed(Button.B, function () {
+    i += 1 // Increment variable
+})
+basic.forever(function () {
+    basic.showNumber(i)
+})
+```
 
 ## Dice (random number)
 <img src="images/dice.png" width="512" />
