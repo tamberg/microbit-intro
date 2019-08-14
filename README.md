@@ -1,11 +1,11 @@
-# Micro:bit introduction
+# Introduction to the micro:bit
 
 ## Get Started
 - Open https://makecode.microbit.org/
 - Connect the micro:bit via USB
 - Save file to "USB Drive"
 
-## <3
+## Show icon ♥
 onstart
 	showicon
 
@@ -44,18 +44,18 @@ dice (random)
 
 ## Rock, Paper, Scissors
 
-<img src="images/rock-paper-scissors.png" width="640" />
+<img src="images/rock-paper-scissors.png" width="512" />
 
 ```
 let hand = 0
 input.onGesture(Gesture.Shake, function () {
-    hand = Math.randomRange(1, 3)
-    if (hand == 1) {
+    hand = Math.randomRange(0, 2)
+    if (hand == 0) {
+        basic.showIcon(IconNames.SmallSquare) // Rock
+    } else if (hand == 1) {
+        basic.showIcon(IconNames.Square) // Paper
+    } else { // hand == 2
         basic.showIcon(IconNames.Scissors)
-    } else if (hand == 2) {
-        basic.showIcon(IconNames.SmallSquare)
-    } else {
-        basic.showIcon(IconNames.Square)
     }
 })
 ```
