@@ -5,9 +5,25 @@
 - Connect the micro:bit via USB
 - Save file to "USB Drive"
 
-## Show icon ♥
-onstart
-	showicon
+## Show LEDs ♥
+<img src="images/icon.png" width="512" />
+
+```
+basic.showLeds(`
+    . # . # .
+    # # # # #
+    # # # # #
+    . # # # .
+    . . # . .
+    `)
+```
+
+## Show icon
+<img src="images/icon-builtin.png" width="512" />
+
+```
+basic.showIcon(IconNames.Heart)
+```
 
 ## Hello, World
 onstart
