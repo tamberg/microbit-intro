@@ -40,7 +40,7 @@ counter (variable)
 
 ```
 input.onGesture(Gesture.Shake, function () {
-    basic.showNumber(Math.randomRange(0, 2))
+    basic.showNumber(Math.randomRange(1, 6))
 })
 ```
 Or with a variable
@@ -49,7 +49,7 @@ Or with a variable
 ```
 let result = 0
 input.onGesture(Gesture.Shake, function () {
-    result = Math.randomRange(0, 2)
+    result = Math.randomRange(1, 6)
     basic.showNumber(result)
 })
 ```
