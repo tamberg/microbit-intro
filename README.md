@@ -44,7 +44,7 @@ dice (random)
 
 ## Rock, Paper, Scissors
 
-<img src="images/rock-paper-scissors.png" width="40%"/>
+<img src="images/rock-paper-scissors.png"/>
 
 ```
 let hand = 0
