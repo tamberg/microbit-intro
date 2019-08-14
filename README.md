@@ -1,7 +1,7 @@
 # Micro:bit Introduction
 
 ## Get Started
-- Open https://makecode.microbit.org
+- Open https://makecode.microbit.org/
 - Connect the Micro:bit via USB
 - Save files to "USB Drive"
 
