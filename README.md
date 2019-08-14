@@ -5,7 +5,7 @@
 - Connect the micro:bit via USB
 - Save file to "USB Drive"
 
-## <3
+## ♥
 onstart
 	showicon
 
