@@ -115,7 +115,7 @@ input.onGesture(Gesture.Shake, function () {
 })
 ```
 
-=> make two, see who wins
+Make two, see who wins.
 
 ## Beep
 sound
