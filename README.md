@@ -71,7 +71,7 @@ basic.forever(function () {
 ```
 
 ## Dice (random number)
-<img src="images/dice.png" width="512" />
+<img src="images/random.png" width="512" />
 
 ```
 input.onGesture(Gesture.Shake, function () {
