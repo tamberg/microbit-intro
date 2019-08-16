@@ -47,10 +47,16 @@ basic.showIcon(IconNames.Heart)
 ```
 
 ## Buttons
-on button A pressed
-	showstring A
-on button B pressed
-	showstring B
+<img src="images/button.png" width="512" />
+
+```
+input.onButtonPressed(Button.A, function () {
+    basic.showString("A")
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showString("B")
+})
+```
 
 ## Counter (variable)
 <img src="images/variable.png" width="512" />
