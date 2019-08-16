@@ -87,7 +87,7 @@ input.onGesture(Gesture.Shake, function () {
 
 Or with a variable
 
-<img src="images/dice-with-variable.png" width="512" />
+<img src="images/random-variable.png" width="512" />
 
 
 ```
