@@ -143,20 +143,6 @@ radio.setGroup(1)
 
 Use a second Micro:bit running the sender code above.
 
-## External Beeper
-Connect an external beeper to Pin *0* and *GND*.
-
-<img src="images/external-beep.png" width="512" />
-
-```
-basic.forever(function () {
-    pins.digitalWritePin(DigitalPin.P0, 1)
-    basic.pause(500)
-    pins.digitalWritePin(DigitalPin.P0, 0)
-    basic.pause(500)
-})
-```
-
 ## External Button (w/ 3V)
 Connect an external button to Pin *2* and *3V*.
 
@@ -178,6 +164,20 @@ pins.onPulsed(DigitalPin.P2, PulseValue.Low, function () {
     basic.showIcon(IconNames.Heart)
 })
 pins.setPull(DigitalPin.P2, PinPullMode.PullUp)
+```
+
+## External Beeper
+Connect an external beeper to Pin *0* and *GND*.
+
+<img src="images/external-beep.png" width="512" />
+
+```
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P0, 1)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    basic.pause(500)
+})
 ```
 
 ## More
