@@ -185,3 +185,4 @@ basic.forever(function () {
 ## More
 - https://github.com/tamberg/microbit-ghoust
 - https://makecode.microbit.org/projects
+- https://makecode.microbit.org/docs
