@@ -134,7 +134,7 @@ basic.forever(function () {
 ## External Button (w/ 3V)
 Connect an external button to Pin *2* and *3V*.
 
-<img src="images/external-button.png" width="512" />
+<img src="images/external-button-3v.png" width="512" />
 
 ```
 pins.onPulsed(DigitalPin.P2, PulseValue.High, function () {
@@ -145,7 +145,7 @@ pins.onPulsed(DigitalPin.P2, PulseValue.High, function () {
 ## External Button (w/ GND)
 Connect an external button to Pin *2* and *GND*.
 
-<img src="images/external-button-pullup.png" width="512" />
+<img src="images/external-button-gnd.png" width="512" />
 
 ```
 pins.onPulsed(DigitalPin.P2, PulseValue.Low, function () {
