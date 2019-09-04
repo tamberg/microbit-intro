@@ -117,6 +117,32 @@ input.onGesture(Gesture.Shake, function () {
 
 Make two, see who wins.
 
+## Radio Alert (Sender)
+
+<img src="images/radio-alert-sender.png" width="512" />
+
+```
+input.onGesture(Gesture.Shake, function () {
+    radio.sendString("alert")
+})
+radio.setGroup(1)
+```
+
+Use a second Micro:bit running the receiver code below.
+
+## Radio Alert (Receiver)
+
+<img src="images/radio-alert-receiver.png" width="512" />
+
+```
+radio.onReceivedString(function (receivedString) {
+    basic.showString(receivedString)
+})
+radio.setGroup(1)
+```
+
+Use a second Micro:bit running the sender code above.
+
 ## External Beeper
 Connect an external beeper to Pin *0* and *GND*.
 
@@ -153,32 +179,6 @@ pins.onPulsed(DigitalPin.P2, PulseValue.Low, function () {
 })
 pins.setPull(DigitalPin.P2, PinPullMode.PullUp)
 ```
-
-## Radio Alert (Sender)
-
-<img src="images/radio-alert-sender.png" width="512" />
-
-```
-input.onGesture(Gesture.Shake, function () {
-    radio.sendString("alert")
-})
-radio.setGroup(1)
-```
-
-Use a second Micro:bit running the receiver code below.
-
-## Radio Alert (Receiver)
-
-<img src="images/radio-alert-receiver.png" width="512" />
-
-```
-radio.onReceivedString(function (receivedString) {
-    basic.showString(receivedString)
-})
-radio.setGroup(1)
-```
-
-Use a second Micro:bit running the sender code above.
 
 ## More
 - https://github.com/tamberg/microbit-ghoust
