@@ -117,7 +117,7 @@ input.onGesture(Gesture.Shake, function () {
 
 Make two, see who wins.
 
-## Beep
+## External Beeper
 Connect an external beeper to Pin *0* and *GND*.
 
 <img src="images/external-beep.png" width="512" />
@@ -154,16 +154,14 @@ pins.onPulsed(DigitalPin.P2, PulseValue.Low, function () {
 pins.setPull(DigitalPin.P2, PinPullMode.PullUp)
 ```
 
-## Radio Alert
-radio
-	on shake
-		send alarm
-	on radio
-		ring the alarm
+## Radio Alert (Sender)
+on shake
+	send alarm
 
-## List
-list
-	?
+## Radio Alert (Receiver)
+on radio
+	ring the alarm
+
 ## More
 - https://github.com/tamberg/microbit-ghoust
 - https://makecode.microbit.org/projects
