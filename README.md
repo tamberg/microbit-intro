@@ -118,10 +118,41 @@ input.onGesture(Gesture.Shake, function () {
 Make two, see who wins.
 
 ## Beep
-sound
-	how to connect the hardware
-	on shake
-		set pin
+Connect an external beeper to Pin *0* and *GND*.
+
+<img src="images/external-beeper.png" width="512" />
+
+```
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P0, 1)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    basic.pause(500)
+})
+```
+
+## External Button
+Connect an external button to Pin *2* and *3V*.
+
+<img src="images/external-button.png" width="512" />
+
+```
+pins.onPulsed(DigitalPin.P2, PulseValue.High, function () {
+    basic.showIcon(IconNames.Heart)
+})
+```
+
+## External Button (PullUp)
+Connect an external button to Pin *2* and *GND*.
+
+<img src="images/external-button-pullup.png" width="512" />
+
+```
+pins.onPulsed(DigitalPin.P2, PulseValue.Low, function () {
+    basic.showIcon(IconNames.Heart)
+})
+pins.setPull(DigitalPin.P2, PinPullMode.PullUp)
+```
 
 ## Radio Alert
 radio
