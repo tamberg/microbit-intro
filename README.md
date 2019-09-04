@@ -120,7 +120,7 @@ Make two, see who wins.
 ## Beep
 Connect an external beeper to Pin *0* and *GND*.
 
-<img src="images/external-beeper.png" width="512" />
+<img src="images/external-beep.png" width="512" />
 
 ```
 basic.forever(function () {
