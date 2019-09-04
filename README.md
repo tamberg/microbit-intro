@@ -143,6 +143,8 @@ radio.setGroup(1)
 
 Use a second Micro:bit running the sender code above.
 
+Make sure to use the same <a href="https://makecode.microbit.org/reference/radio/set-group">group</a> for both.
+
 ## External Button (w/ 3V)
 Connect an external button to Pin *2* and *3V*.
 
