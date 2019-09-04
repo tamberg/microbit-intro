@@ -166,16 +166,16 @@ pins.onPulsed(DigitalPin.P2, PulseValue.Low, function () {
 pins.setPull(DigitalPin.P2, PinPullMode.PullUp)
 ```
 
-## External Beeper
-Connect an external beeper to Pin *0* and *GND*.
+## External Buzzer
+Connect an external buzzer to Pin *1* and *GND*.
 
 <img src="images/external-beep.png" width="512" />
 
 ```
 basic.forever(function () {
-    pins.digitalWritePin(DigitalPin.P0, 1)
+    pins.digitalWritePin(DigitalPin.P1, 1)
     basic.pause(500)
-    pins.digitalWritePin(DigitalPin.P0, 0)
+    pins.digitalWritePin(DigitalPin.P1, 0)
     basic.pause(500)
 })
 ```
