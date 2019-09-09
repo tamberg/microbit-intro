@@ -121,7 +121,7 @@ Make two, see who wins.
 ## Arrays
 A simple way to store multiple values is one variable each.
 
-<img src="images/array-variables.png" width="296" />
+<img src="images/array-variables.png" width="512" />
 
 ```
 let name0 = "Ada"
