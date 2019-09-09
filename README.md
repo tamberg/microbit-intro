@@ -1,7 +1,7 @@
 # Introduction to the micro:bit
 
 ## Get started
-- Open https://makecode.microbit.org/
+- Open the editor https://makecode.microbit.org/
 - Connect the micro:bit to your computer via USB
 - Download the .hex file to the "MICROBIT" drive
 - Wait for the micro:bit's LED to stop blinking
