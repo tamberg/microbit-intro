@@ -227,7 +227,7 @@ text_list = ["A", "B", "C", "D", "E"]
  ```
  
 - Try to implement the following behavior.
-- Each time you press the "Button B" the next Letter will be shown.
+- Each time you press the "Button B" the next letter will be shown.
 - Each time you press the "Button A" the letter bevor will be shown.
 
 
