@@ -192,6 +192,8 @@ basic.forever(function () {
         letterB = "C",
         letterB = "D",
         letterB = "E"
+        
+<img src="images/variables-onstart.png" width="296" />
 
 - To have this in a more convenient way you can use a List. Where the letters are saved on a specific position.
 
@@ -201,7 +203,7 @@ basic.forever(function () {
     LetterList: [3] = "D"
     LetterList: [4] = "E"
     
- <img src="images/variables-onstart.png" width="296" />
+
  <img src="images/list-onstart.png" width="512" />   
 
 - Try to implement the following behavior.
@@ -211,7 +213,7 @@ basic.forever(function () {
 
 <img src="images/list-behavior.png" width="1024" />
 
-- The problem is, that you can jump to positions, where nothing is stored by keeping button "A" or B pressed. 
+- The problem is, that you can jump to positions, where nothing is stored by keeping Button A or  Button B pressed. 
 - Try to implement the following behavior.
 - When Button A is pressed the position can not go higher than the length of the list.
 - When Button B is pressed the position can not go lower than the first position.
