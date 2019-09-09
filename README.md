@@ -52,6 +52,10 @@ on button A pressed
 	showstring A
 on button B pressed
 	showstring B
+	
+<img src="images/blocksAB.png" width="512" />
+
+<img src="images/stringAB.png" width="296" />
 
 ## Counter (variable)
 <img src="images/variable.png" width="512" />
