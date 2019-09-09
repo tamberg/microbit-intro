@@ -96,7 +96,7 @@ input.onGesture(Gesture.Shake, function () {
     basic.showNumber(result)
 })
 ```
-<img src=images/show-number.png" width="296" />
+<img src="images/show-number.png" width="296" />
 
 ## Rock, Paper, Scissors
 <img src="images/rock-paper-scissors.png" width="512" />
