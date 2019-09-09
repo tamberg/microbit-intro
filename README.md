@@ -3,6 +3,7 @@
 ## Get started
 - Open https://makecode.microbit.org/
 - Connect the micro:bit via USB
+- LED on micro:bit turns orange
 - Save file to "USB Drive"
 
 <img src="images/ide.png" width="512" />
