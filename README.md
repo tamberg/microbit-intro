@@ -8,7 +8,7 @@
 - LED on micro:bit will blink yellow until the file has been transferred. 
 
 <img src="images/ide.png" width="512" />
-<img src="images/micro-bit-front-back.png" width="512" />
+<img src="images/micro-bit-front-back.png" width="1024" />
 
 
 ## Show LEDs ♥
@@ -227,12 +227,12 @@ text_list = ["A", "B", "C", "D", "E"]
  ```
  
 - Try to implement the following behavior.
-- Each time you press the "Button B" the next Letter will be shown.
+- Each time you press the "Button B" the next letter will be shown.
 - Each time you press the "Button A" the letter bevor will be shown.
 
 
-<img src="images/list-behavior-a.png" width="1024" />
-<img src="images/list-behavior-b.png" width="1024" />
+<img src="images/list-behavior-a.png" width="512" />
+<img src="images/list-behavior-b.png" width="512" />
 
  ```
  input.onButtonPressed(Button.A, function () {
@@ -257,8 +257,8 @@ text_list = ["A", "B", "C", "D", "E"]
 - When "Button B" is pressed the position can not go higher than the length of the list.
 - When "Button A" is pressed the position can not go lower than the first position.
 
-<img src="images/list-behavior-improved-a.png" width="1024" />
-<img src="images/list-behavior-improved-b.png" width="1024" />
+<img src="images/list-behavior-improved-a.png" width="512" />
+<img src="images/list-behavior-improved-b.png" width="512" />
 
 ```
 input.onButtonPressed(Button.B, function () {
