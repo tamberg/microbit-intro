@@ -118,6 +118,48 @@ input.onGesture(Gesture.Shake, function () {
 
 Make two, see who wins.
 
+## Arrays
+A simple way to store multiple values is one variable each.
+
+<img src="images/array-variables.png" width="296" />
+
+```
+let name0 = "Ada"
+let name1 = "Alan"
+let name2 = "Grace"
+basic.forever(function () {
+    basic.showString(name0)
+    basic.showString(name1)
+    basic.showString(name2)
+})
+
+```
+
+A more compact way to store the same values is an array.
+
+<img src="images/array-getvalueat.png" width="512" />   
+
+```
+let names = ["Ada", "Alan", "Grace"]
+basic.forever(function () {
+    basic.showString(names[0])
+    basic.showString(names[1])
+    basic.showString(names[2])
+}) 
+```
+
+Array values can be accessed at an index (here *0*, *1*, or *2*).
+
+<img src="images/array-getvalueat-random.png" width="512" />   
+
+```
+let names = ["Ada", "Alan", "Grace"]
+basic.forever(function () {
+    let index = Math.randomRange(0, 2)
+    basic.showString(names[index])
+})
+```
+
 ## Radio Alert (Sender)
 
 <img src="images/radio-alert-sender.png" width="512" />
@@ -180,48 +222,6 @@ basic.forever(function () {
     basic.pause(500)
     pins.digitalWritePin(DigitalPin.P0, 0)
     basic.pause(500)
-})
-```
-
-## Arrays
-A simple way to store multiple values is one variable each.
-
-<img src="images/array-variables.png" width="296" />
-
-```
-let name0 = "Ada"
-let name1 = "Alan"
-let name2 = "Grace"
-basic.forever(function () {
-    basic.showString(name0)
-    basic.showString(name1)
-    basic.showString(name2)
-})
-
-```
-
-A more compact way to store the same values is an array.
-
-<img src="images/array-getvalueat.png" width="512" />   
-
-```
-let names = ["Ada", "Alan", "Grace"]
-basic.forever(function () {
-    basic.showString(names[0])
-    basic.showString(names[1])
-    basic.showString(names[2])
-}) 
-```
-
-Array values can be accessed at an index (here *0*, *1*, or *2*).
-
-<img src="images/array-getvalueat-random.png" width="512" />   
-
-```
-let names = ["Ada", "Alan", "Grace"]
-basic.forever(function () {
-    let index = Math.randomRange(0, 2)
-    basic.showString(names[index])
 })
 ```
 
