@@ -209,14 +209,14 @@ basic.forever(function () {
 - Each time you press the Button B the letter bevor will be shown.
 
 
-<img src="images/list-behavior.png" width="512" />
+<img src="images/list-behavior.png" width="1024" />
 
 - The problem is, that you can jump to positions, where nothing is stored by keeping button "A" or B pressed. 
 - Try to implement the following behavior.
 - When Button A is pressed the position can not go higher than the length of the list.
 - When Button B is pressed the position can not go lower than the first position.
 
-<img src="images/list-behavior-improved.png" width="512" />
+<img src="images/list-behavior-improved.png" width="1024" />
 ```
 input.onButtonPressed(Button.A, function () {
     if (counter < text_list.length - 1) {
