@@ -184,11 +184,11 @@ basic.forever(function () {
 ```
 
 ## Arrays
-Arrays are variables that can hold multiple values.
+Arrays can store multiple values,
 
-E.g. the names *Ada*, *Alan* and *Grace*.
+e.g. the names *Ada*, *Alan* and *Grace*.
 
-Here the names are stored in a separate variable each.
+instead of storing each name in a separate variable.
 
 <img src="images/array-variables.png" width="296" />
 
@@ -196,6 +196,12 @@ Here the names are stored in a separate variable each.
 let name0 = "Ada"
 let name1 = "Alan"
 let name2 = "Grace"
+basic.forever(function () {
+    basic.showString(name0)
+    basic.showString(name1)
+    basic.showString(name2)
+})
+
 ```
 
 A more convenient way is to store the names in an array.
@@ -203,12 +209,23 @@ A more convenient way is to store the names in an array.
 <img src="images/array-getvalueat.png" width="512" />   
 
 ```
-let list = ["Ada", "Alan", "Grace"]
+let names = ["Ada", "Alan", "Grace"]
 basic.forever(function () {
-    basic.showString("" + list[0])
-    basic.showString("" + list[1])
-    basic.showString("" + list[2])
+    basic.showString(names[0])
+    basic.showString(names[1])
+    basic.showString(names[2])
 }) 
+```
+
+Array values can be accessed through an index (here *0*, *1*, or *2*).
+
+<img src="images/array-getvalueat-random.png" width="512" />   
+
+```
+let names = ["Ada", "Alan", "Grace"]
+basic.forever(function () {
+    basic.showString(names[Math.randomRange(0, 2)])
+})
 ```
 
 ## More
