@@ -56,7 +56,7 @@ on button B pressed
 ## Counter (variable)
 <img src="images/variable.png" width="512" />
 
-<img src="images/counter.png" width="512" />
+<img src="images/counter.png" width="296" />
 
 ```
 let i = 0 // Variable
