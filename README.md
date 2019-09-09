@@ -8,6 +8,8 @@
 - LED on micro:bit will blink yellow until the file has been transferred. 
 
 <img src="images/ide.png" width="512" />
+<img src="images/micro-bit-front-back.png" width="512" />
+
 
 ## Show LEDs ♥
 <img src="images/leds.png" width="512" />
@@ -186,49 +188,87 @@ basic.forever(function () {
 
 ## List
 
-- Imagen the Letters "A" "B" "C" "D" "E" saved in 5 different variables like:
-        letterA = "A"
-        letterB = "B",
-        letterB = "C",
-        letterB = "D",
-        letterB = "E"
+- Imagen the letters "A" "B" "C" "D" "E" saved in 5 different variables like:
+        
+    - letterA = "A"
+    - letterB = "B",
+    - letterB = "C",
+    - letterB = "D",
+    - letterB = "E"
         
 <img src="images/variables-onstart.png" width="296" />
 
-- To have this in a more convenient way you can use a List. Where the letters are saved on a specific position.
+```
 
-    LetterList: [0] = "A" 
-    LetterList: [1] = "B"
-    LetterList: [2] = "C"
-    LetterList: [3] = "D"
-    LetterList: [4] = "E"
+let letterA = "A"
+let letterB = "B"
+let letterC = "C"
+let letterD = "D"
+let letterE = "E"
+
+```
+
+- To have this in a more convenient way you can use a list. Where the letters are saved on a specific position.
+
+   -  LetterList: [0] = "A" 
+   -  LetterList: [1] = "B"
+   -  LetterList: [2] = "C"
+   -  LetterList: [3] = "D"
+   -  LetterList: [4] = "E"
     
 
  <img src="images/list-onstart.png" width="512" />   
-
+ 
+ ```
+ 
+let text_list: string[] = []
+text_list = ["A", "B", "C", "D", "E"]
+ 
+ ```
+ 
 - Try to implement the following behavior.
-- Each time you press the Button A the next Letter will be shown.
-- Each time you press the Button B the letter bevor will be shown.
+- Each time you press the "Button B" the next Letter will be shown.
+- Each time you press the "Button A" the letter bevor will be shown.
 
 
-<img src="images/list-behavior.png" width="1024" />
+<img src="images/list-behavior-a.png" width="1024" />
+<img src="images/list-behavior-b.png" width="1024" />
 
-- The problem is, that you can jump to positions, where nothing is stored by keeping Button A or  Button B pressed. 
+ ```
+ input.onButtonPressed(Button.A, function () {
+    counter += -1
+    basic.showString("" + text_list[counter])
+ })
+ 
+ input.onButtonPressed(Button.B, function () {
+    counter += 1
+    basic.showString("" + text_list[counter])
+ })
+ 
+ let text_list: string[] = []
+ let counter = 0
+ counter = -1
+ text_list = ["A", "B", "C", "D", "E"]
+ 
+ ```
+
+- The problem is, that you can jump to positions, where nothing is stored by keeping "Button A" or  "Button B" pressed. 
 - Try to implement the following behavior.
-- When Button A is pressed the position can not go higher than the length of the list.
-- When Button B is pressed the position can not go lower than the first position.
+- When "Button B" is pressed the position can not go higher than the length of the list.
+- When "Button A" is pressed the position can not go lower than the first position.
 
-<img src="images/list-behavior-improved.png" width="1024" />
+<img src="images/list-behavior-improved-a.png" width="1024" />
+<img src="images/list-behavior-improved-b.png" width="1024" />
 
 ```
-input.onButtonPressed(Button.A, function () {
+input.onButtonPressed(Button.B, function () {
     if (counter < text_list.length - 1) {
     counter += 1
     basic.showString("" + text_list[counter])
     }
 })
 
-input.onButtonPressed(Button.B, function () {
+input.onButtonPressed(Button.A, function () {
     if (counter > 0) {
     counter += -1
     basic.showString("" + text_list[counter])
@@ -243,7 +283,6 @@ text_list = ["A", "B", "C", "D", "E"]
 ```
 
 - Try to do the same for your name :-)
-
 
 
 ## More
