@@ -184,11 +184,7 @@ basic.forever(function () {
 ```
 
 ## Arrays
-Arrays can store multiple values,
-
-e.g. the names *Ada*, *Alan* and *Grace*.
-
-instead of storing each name in a separate variable.
+A simple way to store multiple values is one variable each.
 
 <img src="images/array-variables.png" width="296" />
 
@@ -204,7 +200,7 @@ basic.forever(function () {
 
 ```
 
-A more convenient way is to store the names in an array.
+A more compact way to store the same values is an array.
 
 <img src="images/array-getvalueat.png" width="512" />   
 
@@ -217,14 +213,15 @@ basic.forever(function () {
 }) 
 ```
 
-Array values can be accessed through an index (here *0*, *1*, or *2*).
+Array values can be accessed at an index (here *0*, *1*, or *2*).
 
 <img src="images/array-getvalueat-random.png" width="512" />   
 
 ```
 let names = ["Ada", "Alan", "Grace"]
 basic.forever(function () {
-    basic.showString(names[Math.randomRange(0, 2)])
+    let index = Math.randomRange(0, 2)
+    basic.showString(names[index])
 })
 ```
 
