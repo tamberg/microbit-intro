@@ -2,8 +2,9 @@
 
 ## Get started
 - Open https://makecode.microbit.org/
-- Connect micro:bit via USB
-- Save .hex file to "USB Drive"
+- Connect the micro:bit to your computer via USB
+- Download the .hex file to the "MICROBIT" drive
+- Wait for the micro:bit's LED to stop blinking
 
 <img src="images/ide.png" width="512" />
 
