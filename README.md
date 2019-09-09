@@ -13,10 +13,8 @@
 ## Show LEDs ♥
 <img src="images/leds.png" width="512" />
 
-<img src="images/microbit-heart.png" width="512" title="(c) Microbit.org" />
-
 ## Show icon
-<img src="images/icon.png" width="512" />
+<img src="images/microbit-heart.png" width="512" title="(c) Microbit.org" />
 
 ```
 basic.showIcon(IconNames.Heart)
