@@ -217,6 +217,7 @@ basic.forever(function () {
 - When Button B is pressed the position can not go lower than the first position.
 
 <img src="images/list-behavior-improved.png" width="1024" />
+
 ```
 input.onButtonPressed(Button.A, function () {
     if (counter < text_list.length - 1) {
