@@ -2,8 +2,8 @@
 
 ## Get started
 - Open https://makecode.microbit.org/
-- Connect the micro:bit via USB
-- Save file to "USB Drive"
+- Connect micro:bit via USB
+- Save .hex file to "USB Drive"
 
 <img src="images/ide.png" width="512" />
 
@@ -128,7 +128,7 @@ input.onGesture(Gesture.Shake, function () {
 radio.setGroup(1)
 ```
 
-Use a second Micro:bit running the receiver code below.
+Use a second micro:bit running the receiver code below.
 
 ## Radio Alert (Receiver)
 
@@ -141,7 +141,7 @@ radio.onReceivedString(function (receivedString) {
 radio.setGroup(1)
 ```
 
-Use a second Micro:bit running the sender code above.
+Use a second micro:bit running the sender code above.
 
 Make sure to use the same <a href="https://makecode.microbit.org/reference/radio/set-group">group</a> for both.
 
