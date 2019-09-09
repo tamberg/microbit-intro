@@ -4,7 +4,8 @@
 - Open https://makecode.microbit.org/
 - Connect the micro:bit via USB
 - LED on micro:bit turns orange
-- Save the .hex file to "USB Drive" 
+- Save the .hex file to "USB Drive"
+- LED on micro:bit will blink yellow until the file has been transferred. 
 
 <img src="images/ide.png" width="512" />
 
