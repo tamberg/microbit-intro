@@ -183,6 +183,34 @@ basic.forever(function () {
 })
 ```
 
+## Arrays
+Arrays are variables that can hold multiple values.
+
+E.g. the names *Ada*, *Alan* and *Grace*.
+
+Here the names are stored in a separate variable each.
+
+<img src="images/array-variables.png" width="296" />
+
+```
+let name0 = "Ada"
+let name1 = "Alan"
+let name2 = "Grace"
+```
+
+A more convenient way is to store the names in an array.
+
+<img src="images/array-getvalueat.png" width="512" />   
+
+```
+let list = ["Ada", "Alan", "Grace"]
+basic.forever(function () {
+    basic.showString("" + list[0])
+    basic.showString("" + list[1])
+    basic.showString("" + list[2])
+}) 
+```
+
 ## More
 - https://github.com/tamberg/microbit-ghoust
 - https://makecode.microbit.org/projects
