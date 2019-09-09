@@ -8,20 +8,21 @@
 - LED on micro:bit will blink yellow until the file has been transferred. 
 
 <img src="images/ide.png" width="512" />
-<img src="images/micro-bit-front-back.png" width="512" />
 
 ## Show LEDs ♥
 <img src="images/leds.png" width="512" />
 
-## Show icon
 <img src="images/microbit-heart.png" width="512" title="(c) Microbit.org" />
+
+## Show icon
+<img src="images/icon.png" width="512" />
 
 ```
 basic.showIcon(IconNames.Heart)
 ```
 
 ## Hello, World
-<img src="images/hello.png" width="296" />
+<img src="images/hello.png" width="512" />
 
 ```
 basic.showString("Hello, World!")
@@ -48,19 +49,21 @@ basic.showIcon(IconNames.Heart)
 ```
 
 ## Buttons
-on button A pressed
-	showstring A
-on button B pressed
-	showstring B
-	
-<img src="images/blocksAB.png" width="512" />
+<img src="images/button.png" width="512" />
 
-<img src="images/stringAB.png" width="296" />
+```
+input.onButtonPressed(Button.A, function () {
+    basic.showString("A")
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showString("B")
+})
+```
 
 ## Counter (variable)
 <img src="images/variable.png" width="512" />
 
-<img src="images/counter.png" width="296" />
+<img src="images/counter.png" width="512" />
 
 ```
 let i = 0 // Variable
@@ -76,7 +79,7 @@ basic.forever(function () {
 ```
 
 ## Dice (random number)
-<img src="images/dice.png" width="512" />
+<img src="images/random.png" width="512" />
 
 ```
 input.onGesture(Gesture.Shake, function () {
@@ -86,7 +89,7 @@ input.onGesture(Gesture.Shake, function () {
 
 Or with a variable
 
-<img src="images/dice-with-variable.png" width="512" />
+<img src="images/random-variable.png" width="512" />
 
 
 ```
@@ -96,7 +99,6 @@ input.onGesture(Gesture.Shake, function () {
     basic.showNumber(result)
 })
 ```
-<img src="images/show-number.png" width="296" />
 
 ## Rock, Paper, Scissors
 <img src="images/rock-paper-scissors.png" width="512" />
@@ -115,23 +117,133 @@ input.onGesture(Gesture.Shake, function () {
 })
 ```
 
-=> make two, see who wins
+Make two, see who wins.
 
-## Beep
-sound
-	how to connect the hardware
-	on shake
-		set pin
+## Radio Alert (Sender)
 
-## Radio Alert
-radio
-	on shake
-		send alarm
-	on radio
-		ring the alarm
+<img src="images/radio-alert-sender.png" width="512" />
+
+```
+input.onGesture(Gesture.Shake, function () {
+    radio.sendString("alert")
+})
+radio.setGroup(1)
+```
+
+Use a second Micro:bit running the receiver code below.
+
+## Radio Alert (Receiver)
+
+<img src="images/radio-alert-receiver.png" width="512" />
+
+```
+radio.onReceivedString(function (receivedString) {
+    basic.showString(receivedString)
+})
+radio.setGroup(1)
+```
+
+Use a second Micro:bit running the sender code above.
+
+Make sure to use the same <a href="https://makecode.microbit.org/reference/radio/set-group">group</a> for both.
+
+## External Button (w/ 3V)
+Connect an external button to Pin *2* and *3V*.
+
+<img src="images/external-button-3v.png" width="512" />
+
+```
+pins.onPulsed(DigitalPin.P2, PulseValue.High, function () {
+    basic.showIcon(IconNames.Heart)
+})
+```
+
+## External Button (w/ GND)
+Connect an external button to Pin *2* and *GND*.
+
+<img src="images/external-button-gnd.png" width="512" />
+
+```
+pins.onPulsed(DigitalPin.P2, PulseValue.Low, function () {
+    basic.showIcon(IconNames.Heart)
+})
+pins.setPull(DigitalPin.P2, PinPullMode.PullUp)
+```
+
+## External Buzzer
+Connect an external buzzer to Pin *0* and *GND*.
+
+<img src="images/external-beep.png" width="512" />
+
+```
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P0, 1)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P0, 0)
+    basic.pause(500)
+})
+```
 
 ## List
-list
-	?
+
+- Imagen the Letters "A" "B" "C" "D" "E" saved in 5 different variables like:
+        letterA = "A"
+        letterB = "B",
+        letterB = "C",
+        letterB = "D",
+        letterB = "E"
+
+- To have this in a more convenient way you can use a List. Where the letters are saved on a specific position.
+
+    LetterList: [0] = "A" 
+    LetterList: [1] = "B"
+    LetterList: [2] = "C"
+    LetterList: [3] = "D"
+    LetterList: [4] = "E"
+    
+ <img src="images/variables-onstart.png" width="512" />
+ <img src="images/list-onstart.png width="512" />   
+
+- Try to implement the following behavior.
+- Each time you press the Button A the next Letter will be shown.
+- Each time you press the Button B the letter bevor will be shown.
+
+
+<img src="images/list-behavior.png width="512" />
+
+- The problem is, that you can jump to positions, where nothing is stored by keeping button "A" or B pressed. 
+- Try to implement the following behavior.
+- When Button A is pressed the position can not go higher than the length of the list.
+- When Button B is pressed the position can not go lower than the first position.
+
+<img src="images/list-behavior-improved.png width="512" />
+```
+input.onButtonPressed(Button.A, function () {
+    if (counter < text_list.length - 1) {
+    counter += 1
+    basic.showString("" + text_list[counter])
+    }
+})
+
+input.onButtonPressed(Button.B, function () {
+    if (counter > 0) {
+    counter += -1
+    basic.showString("" + text_list[counter])
+    }
+})
+
+let counter = 0
+counter = -1
+
+let text_list: string[] = []
+text_list = ["A", "B", "C", "D", "E"]
+```
+
+- Try to do the same for your name :-)
+
+
+
 ## More
-- See https://makecode.microbit.org/projects
+- https://github.com/tamberg/microbit-ghoust
+- https://makecode.microbit.org/projects
+- https://makecode.microbit.org/docs
