@@ -136,14 +136,14 @@ basic.forever(function () {
 ```
 
 ## Array (value at index)
-A more compact way to store the same values is an array.
+A more compact way to store multiple values is an array.
 
 <img src="images/array-getvalueat.png" width="512" />   
 
 ```
-let names = ["Ada", "Alan", "Grace"]
+let names = ["Ada", "Alan", "Grace"] // Array
 basic.forever(function () {
-    basic.showString(names[0])
+    basic.showString(names[0]) // shows "Ada"
     basic.showString(names[1])
     basic.showString(names[2])
 }) 
