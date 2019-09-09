@@ -8,7 +8,7 @@
 - LED on micro:bit will blink yellow until the file has been transferred. 
 
 <img src="images/ide.png" width="512" />
-<img src="images/micro-bit-front-back.png" width="512" />
+<img src="images/micro-bit-front-back.png" width="1024" />
 
 
 ## Show LEDs ♥
