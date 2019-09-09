@@ -21,7 +21,7 @@ basic.showIcon(IconNames.Heart)
 ```
 
 ## Hello, World
-<img src="images/hello.png" width="256" />
+<img src="images/hello.png" width="280" />
 
 ```
 basic.showString("Hello, World!")
