@@ -149,7 +149,6 @@ basic.forever(function () {
 }) 
 ```
 
-## Array (random value)
 Array values can be accessed at an index (here *0*, *1*, or *2*).
 
 <img src="images/array-getvalueat-random.png" width="512" />   
